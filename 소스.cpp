@@ -1,4 +1,3 @@
-//2023111359 ÃÖ°¡À±
 #include <iostream>
 using namespace std;
 
@@ -21,7 +20,7 @@ public:
     void print();
 };
 
-//¿©±â¿¡ Date Å¬·¡½ºÀÇ ¸â¹öÇÔ¼ö¸¦ ±¸ÇöÇÏ¼¼¿ä.
+//ì—¬ê¸°ì— Date í´ë˜ìŠ¤ì˜ ë©¤ë²„í•¨ìˆ˜ë¥¼ êµ¬í˜„í•˜ì„¸ìš”.
 Date::Date() {
     year = 0;
     month = 0;
@@ -48,13 +47,13 @@ void Date::setD(int d) {
     day = d;
 }
 void Date::print() {
-    cout << year << "³â " << month << "¿ù " << day << "ÀÏ"<<endl;
+    cout << year << "ë…„ " << month << "ì›” " << day << "ì¼"<<endl;
 }
 
 class Employee {
-    // (Å¬·¡½º ¼±¾ğºÎ)
-    // ¿©±â¿¡ Date Å¬·¡½º ¸â¹ö º¯¼ö¸¦ Æ÷ÇÔÇÑ 
-    // Employee Å¬·¡½º ¸â¹öµéÀ» Ãß°¡ÇÏ¼¼¿ä.
+    // (í´ë˜ìŠ¤ ì„ ì–¸ë¶€)
+    // ì—¬ê¸°ì— Date í´ë˜ìŠ¤ ë©¤ë²„ ë³€ìˆ˜ë¥¼ í¬í•¨í•œ 
+    // Employee í´ë˜ìŠ¤ ë©¤ë²„ë“¤ì„ ì¶”ê°€í•˜ì„¸ìš”.
 private:
     string name;
     Date birth;
@@ -66,24 +65,24 @@ public:
     void print();
 };
 
-//¿©±â¿¡ Employee Å¬·¡½ºÀÇ ¸â¹öÇÔ¼ö¸¦ ±¸ÇöÇÏ¼¼¿ä.
+//ì—¬ê¸°ì— Employee í´ë˜ìŠ¤ì˜ ë©¤ë²„í•¨ìˆ˜ë¥¼ êµ¬í˜„í•˜ì„¸ìš”.
 Employee::Employee() {
     name = "";
 }
 Employee::Employee(string n, Date b, Date h) : name(n), birth(b), hire(h) {}
 Employee::~Employee() {}
 void Employee::print() {
-    cout << "ÀÌ  ¸§ : " << name << endl;
-    cout << "»ı  ÀÏ : ";
+    cout << "ì´  ë¦„ : " << name << endl;
+    cout << "ìƒ  ì¼ : ";
     birth.print();
-    cout << "ÀÔ»çÀÏ : ";
+    cout << "ì…ì‚¬ì¼ : ";
     hire.print();
 }
 
 int main() {
     Date bir(2001, 10, 01);
     Date hir(2020, 10, 01);
-    Employee emp;
+    Employee emp("í™ê¸¸ë™", bir, hir);
     emp.print();
     return 0;
 }
